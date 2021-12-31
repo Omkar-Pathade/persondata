@@ -37,7 +37,7 @@ public class BootstrapData implements CommandLineRunner {
         publisher.setZip(414003L);
         publisherRepository.save(publisher);
 
-        eric.getBooks().add(book);
+        eric.getBook().add(book);
         book.getAuthors().add(eric);
         book.setPublisher(publisher);
         publisher.getBooks().add(book);
@@ -49,7 +49,7 @@ public class BootstrapData implements CommandLineRunner {
 
         Author rod = new Author("Rod", "Johnson");
         Book book1=new Book("J2EE","123456");
-        rod.getBooks().add(book1);
+        rod.getBook().add(book1);
         book1.getAuthors().add(rod);
         book1.setPublisher(publisher);
         publisher.getBooks().add(book1);
